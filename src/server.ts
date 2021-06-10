@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 
 const { PORT = 3000 } = process.env;
 
@@ -12,4 +13,9 @@ app.use(express.static('dist/app'));
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
+});
+
+// Handle client routing, return all requests to the app
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(__dirname, 'app/index.html'));
 });

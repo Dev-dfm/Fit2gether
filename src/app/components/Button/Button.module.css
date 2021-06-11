@@ -7,3 +7,11 @@
   border: none;
   border-radius: 2em;
 }
+
+.button--primary {
+  background: var(--primary-color);
+}
+
+.button--secondary {
+  background: var(--secondary-color);
+}

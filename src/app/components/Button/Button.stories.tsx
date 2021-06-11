@@ -6,12 +6,12 @@ export default {
   component: Button,
 };
 
-export const Login = (): JSX.Element => (
+export const LoginButton = (): JSX.Element => (
   <Button variant="secondary">Login</Button>
 );
-export const Register = (): JSX.Element => (
+export const RegisterButton = (): JSX.Element => (
   <Button variant="primary">Register</Button>
 );
-export const Reset = (): JSX.Element => (
+export const ResetButton = (): JSX.Element => (
   <Button variant="primary">Reset password</Button>
 );

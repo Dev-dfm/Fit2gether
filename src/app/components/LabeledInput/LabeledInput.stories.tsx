@@ -8,7 +8,7 @@ export default {
 
 export const email = (): JSX.Element => (
   <LabeledInput
-    pseudoplaceholder="email"
+    label="email"
     placeholder=""
     value=""
     required={true}
@@ -18,7 +18,7 @@ export const email = (): JSX.Element => (
 
 export const password = (): JSX.Element => (
   <LabeledInput
-    pseudoplaceholder="password"
+    label="password"
     placeholder=""
     value=""
     required={true}

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './LabeledInput.module.css';
 
 type LabeledInputProps = {
-  pseudoplaceholder: string;
+  label: string;
   placeholder: string;
   value: string;
   type?: string;
@@ -11,7 +11,7 @@ type LabeledInputProps = {
 };
 
 export default function LabeledInput({
-  pseudoplaceholder,
+  label,
   placeholder,
   value,
   type,
@@ -28,7 +28,7 @@ export default function LabeledInput({
         required={required}
         onChange={(e) => onChange(e.target.value)}
       />
-      <span className={styles.container__placeholder}>{pseudoplaceholder}</span>
+      <span className={styles.container__placeholder}>{label}</span>
     </label>
   );
 }

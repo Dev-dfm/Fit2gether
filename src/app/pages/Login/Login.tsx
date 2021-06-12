@@ -30,7 +30,7 @@ function Login(): JSX.Element {
           <div>
             <LabeledInput
               placeholder=""
-              pseudoplaceholder="email"
+              label="email"
               type="email"
               value={email}
               onChange={setEmail}
@@ -38,7 +38,7 @@ function Login(): JSX.Element {
             />
             <LabeledInput
               placeholder=""
-              pseudoplaceholder="password"
+              label="password"
               type="password"
               value={password}
               onChange={setPassword}

@@ -6,6 +6,8 @@
   border: none;
   border-radius: 2em;
   font-size: 1.125rem;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .button--primary {
@@ -14,4 +16,16 @@
 
 .button--secondary {
   background: var(--secondary-color);
+}
+
+.button--primary:focus {
+  background: var(--primary-clicked-color);
+  transform: scale(1.025);
+  box-shadow: 0 0 0.7em 0 var(--primary-clicked-color);
+}
+
+.button--secondary:focus {
+  background: var(--secondary-clicked-color);
+  transform: scale(1.025);
+  box-shadow: 0 0 0.7em 0 var(--secondary-clicked-color);
 }

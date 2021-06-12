@@ -20,6 +20,11 @@
   z-index: 1;
 }
 
+.designElement {
+  overflow: hidden;
+  z-index: 2;
+}
+
 .main,
 .logo {
   z-index: 3;
@@ -60,12 +65,4 @@
 
 .form__linkSpan {
   color: var(--secondary-text-color);
-}
-
-.designElement {
-  width: 100vw;
-  overflow: hidden;
-  align-self: end;
-  max-height: 24em;
-  z-index: 2;
 }

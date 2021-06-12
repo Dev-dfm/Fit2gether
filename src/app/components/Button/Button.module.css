@@ -19,13 +19,13 @@
 }
 
 .button--primary:focus {
-  background: var(--primary-clicked-color);
+  background: var(--primary-button-color);
   transform: scale(1.025);
-  box-shadow: 0 0 0.7em 0 var(--primary-clicked-color);
+  box-shadow: 0 0 0.7em 0 var(--primary-button-color);
 }
 
 .button--secondary:focus {
-  background: var(--secondary-clicked-color);
+  background: var(--secondary-button-color);
   transform: scale(1.025);
-  box-shadow: 0 0 0.7em 0 var(--secondary-clicked-color);
+  box-shadow: 0 0 0.7em 0 var(--secondary-button-color);
 }

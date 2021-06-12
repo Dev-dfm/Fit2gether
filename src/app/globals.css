@@ -20,8 +20,8 @@
   --input-text-color: #bcbcbc;
   --input-text-focus: #ffce48;
   --border-color: #49fce6;
-  --primary-clicked-color: #228075;
-  --secondary-clicked-color: #1d353f;
+  --primary-button-color: #228075;
+  --secondary-button-color: #1d353f;
 
   /* SIZES */
   --font-size: 100%;

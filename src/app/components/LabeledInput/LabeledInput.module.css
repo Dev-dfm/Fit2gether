@@ -9,27 +9,29 @@
   font-size: 1rem;
   background: rgba(42, 157, 143, 0.8);
   color: var(--secondary-text-color);
-  width: 80%;
-  padding: 0.8em;
+  width: 70vw;
+  padding: 1.1em 0.5em 0.5em 1.5em;
 }
 
 .container__placeholder {
   position: absolute;
-  left: 1rem;
-  max-width: 92%;
-  top: 0.5em;
-  line-height: 100%;
   transform: translateY(-50%);
   color: var(--input-text-color);
-  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in,
+    color 200ms ease-in;
+  left: 1.5rem;
+  top: 1.5rem;
+  max-width: 92%;
 }
 
 .container__input:focus {
   outline: none;
 }
 
+/* .container__input:not(:placeholder-shown).container__input:not(:focus) + .container__placeholder */
 .container__input:valid + .container__placeholder,
 .container__input:focus + .container__placeholder {
-  top: -0.5em;
+  top: 0.5rem;
   font-size: 0.8rem;
+  color: var(--input-text-focus);
 }

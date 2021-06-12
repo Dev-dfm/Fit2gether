@@ -8,7 +8,8 @@ export default {
 
 export const email = (): JSX.Element => (
   <LabeledInput
-    placeholder="email"
+    pseudoplaceholder="email"
+    placeholder=""
     value=""
     required={true}
     onChange={console.log}
@@ -17,7 +18,8 @@ export const email = (): JSX.Element => (
 
 export const password = (): JSX.Element => (
   <LabeledInput
-    placeholder="password"
+    pseudoplaceholder="password"
+    placeholder=""
     value=""
     required={true}
     onChange={console.log}

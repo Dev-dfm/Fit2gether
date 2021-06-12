@@ -27,28 +27,30 @@ function Login(): JSX.Element {
 
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
-          <LabeledInput
-            placeholder=""
-            pseudoplaceholder="email"
-            type="email"
-            value={email}
-            onChange={setEmail}
-            required
-          />
-          <LabeledInput
-            placeholder=""
-            pseudoplaceholder="password"
-            type="password"
-            value={password}
-            onChange={setPassword}
-            required
-          />
+          <div>
+            <LabeledInput
+              placeholder=""
+              pseudoplaceholder="email"
+              type="email"
+              value={email}
+              onChange={setEmail}
+              required
+            />
+            <LabeledInput
+              placeholder=""
+              pseudoplaceholder="password"
+              type="password"
+              value={password}
+              onChange={setPassword}
+              required
+            />
+          </div>
           <Link to="#" className={styles.form__link}>
             Forgot password?
           </Link>
           <Button variant="secondary">Log in</Button>
           <Link to="#" className={styles.form__link}>
-            <span className={styles.form__span}>Not a member?</span> Sign up
+            <span className={styles.form__linkSpan}>Not a member?</span> Sign up
           </Link>
         </form>
       </main>

@@ -18,6 +18,7 @@
   --secondary-text-color: #fff;
   --tertiary-text-color: #707070;
   --input-text-color: #bcbcbc;
+  --input-text-focus: #ffce48;
   --border-color: #49fce6;
 
   /* SIZES */
@@ -37,6 +38,4 @@ body {
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
-  color: inherit;
 }

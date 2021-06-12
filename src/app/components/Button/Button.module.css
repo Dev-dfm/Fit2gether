@@ -6,7 +6,7 @@
   border: none;
   border-radius: 2em;
   font-size: 1.125rem;
-  width: 70%;
+  width: clamp(20em, 70%, 25em);
   margin: 0 auto;
 }
 

@@ -9,7 +9,7 @@
   font-size: 1rem;
   background: rgba(42, 157, 143, 0.8);
   color: var(--secondary-text-color);
-  width: 70vw;
+  width: clamp(23em, 70%, 30em);
   padding: 1.1em 0.5em 0.5em 1.5em;
   margin: 0.5em 0;
 }

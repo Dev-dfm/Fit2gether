@@ -29,9 +29,9 @@
   outline: none;
 }
 
-/* .container__input:not(:placeholder-shown).container__input:not(:focus) + .container__placeholder */
-.container__input:valid + .container__placeholder,
-.container__input:focus + .container__placeholder {
+.container__input:focus + .container__placeholder,
+.container__input:not(:placeholder-shown).container__input:not(:focus)
+  + .container__placeholder {
   top: -0.8em;
   font-size: 0.8em;
   color: var(--input-text-focus);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function DesginElementLogin() {
+export default function DesginElementLogin(): JSX.Element {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375.001 136.588">
       <g transform="translate(0 -675.413)">

@@ -21,9 +21,8 @@
 }
 
 .main,
-.logo,
-.designElement {
-  z-index: 2;
+.logo {
+  z-index: 3;
 }
 
 .logo {
@@ -68,4 +67,5 @@
   overflow: hidden;
   align-self: end;
   max-height: 24em;
+  z-index: 2;
 }

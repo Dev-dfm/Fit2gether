@@ -29,6 +29,7 @@ function Login(): JSX.Element {
         <form onSubmit={handleSubmit} className={styles.form}>
           <div>
             <LabeledInput
+              variant="primary"
               placeholder="&nbsp;"
               label="email"
               type="email"
@@ -37,6 +38,7 @@ function Login(): JSX.Element {
               required
             />
             <LabeledInput
+              variant="primary"
               placeholder="&nbsp;"
               label="password"
               type="password"

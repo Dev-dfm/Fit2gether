@@ -6,8 +6,9 @@ export default {
   component: LabeledInput,
 };
 
-export const email = (): JSX.Element => (
+export const PrimaryEmail = (): JSX.Element => (
   <LabeledInput
+    variant="primary"
     label="email"
     placeholder=""
     value=""
@@ -16,8 +17,31 @@ export const email = (): JSX.Element => (
   />
 );
 
-export const password = (): JSX.Element => (
+export const PrimaryPassword = (): JSX.Element => (
   <LabeledInput
+    variant="primary"
+    label="password"
+    placeholder=""
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);
+
+export const SecondaryEmail = (): JSX.Element => (
+  <LabeledInput
+    variant="secondary"
+    label="email"
+    placeholder=""
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);
+
+export const SecondaryPassword = (): JSX.Element => (
+  <LabeledInput
+    variant="secondary"
     label="password"
     placeholder=""
     value=""

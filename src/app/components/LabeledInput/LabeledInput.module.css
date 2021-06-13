@@ -9,27 +9,30 @@
   font-size: 1rem;
   background: rgba(42, 157, 143, 0.8);
   color: var(--secondary-text-color);
-  width: 80%;
-  padding: 0.8em;
+  width: clamp(23em, 70%, 30em);
+  padding: 1.1em 0.5em 0.5em 1.5em;
+  margin: 0.5em 0;
 }
 
 .container__placeholder {
   position: absolute;
-  left: 1rem;
-  max-width: 92%;
-  top: 0.5em;
-  line-height: 100%;
   transform: translateY(-50%);
   color: var(--input-text-color);
-  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in,
+    color 200ms ease-in;
+  max-width: 92%;
+  left: 1.5em;
+  top: 0.25em;
 }
 
 .container__input:focus {
   outline: none;
 }
 
-.container__input:valid + .container__placeholder,
-.container__input:focus + .container__placeholder {
-  top: -0.5em;
-  font-size: 0.8rem;
+.container__input:focus + .container__placeholder,
+.container__input:not(:placeholder-shown).container__input:not(:focus)
+  + .container__placeholder {
+  top: -0.8em;
+  font-size: 0.8em;
+  color: var(--input-text-focus);
 }

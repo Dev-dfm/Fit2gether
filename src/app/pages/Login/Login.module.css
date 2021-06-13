@@ -1,0 +1,68 @@
+.container {
+  height: 100vh;
+  background-image: url(/login.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  position: relative;
+  grid-template-rows: auto 1fr auto;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.designElement {
+  overflow: hidden;
+  z-index: 2;
+}
+
+.main,
+.logo {
+  z-index: 3;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  color: var(--primary-color);
+  padding-top: 5em;
+}
+
+.logo__text {
+  font-size: 2rem;
+  transform: translate3d(-1.25rem, -0.8rem, 0);
+}
+
+.logo__number {
+  font-size: 4.2rem;
+}
+
+.main {
+  align-self: end;
+  padding-bottom: 4rem;
+}
+
+.form {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  gap: 1em;
+}
+
+.form__link {
+  color: var(--tertiary-color);
+  font-size: 1.125em;
+}
+
+.form__linkSpan {
+  color: var(--secondary-text-color);
+}

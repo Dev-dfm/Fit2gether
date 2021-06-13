@@ -18,7 +18,10 @@
   --secondary-text-color: #fff;
   --tertiary-text-color: #707070;
   --input-text-color: #bcbcbc;
+  --input-text-focus: #ffce48;
   --border-color: #49fce6;
+  --primary-button-color: #228075;
+  --secondary-button-color: #1d353f;
 
   /* SIZES */
   --font-size: 100%;
@@ -37,6 +40,4 @@ body {
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
-  color: inherit;
 }

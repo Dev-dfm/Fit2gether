@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './LabeledInput.module.css';
 
 type LabeledInputProps = {
+  variant?: 'primary' | 'secondary';
   label: string;
   placeholder: string;
   value: string;
@@ -11,6 +12,7 @@ type LabeledInputProps = {
 };
 
 export default function LabeledInput({
+  variant,
   label,
   placeholder,
   value,
@@ -21,14 +23,30 @@ export default function LabeledInput({
   return (
     <label className={styles.container}>
       <input
-        className={styles.container__input}
+        className={
+          variant
+            ? `${styles[`container__input--${variant}`]} ${
+                styles.container__input
+              }`
+            : styles.container__input
+        }
         placeholder={placeholder}
         type={type}
         value={value}
         required={required}
         onChange={(e) => onChange(e.target.value)}
       />
-      <span className={styles.container__placeholder}>{label}</span>
+      <span
+        className={
+          variant
+            ? `${styles[`container__placeholder--${variant}`]} ${
+                styles.container__placeholder
+              }`
+            : styles.container__placeholder
+        }
+      >
+        {label}
+      </span>
     </label>
   );
 }

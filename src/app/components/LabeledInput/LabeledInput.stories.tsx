@@ -49,3 +49,25 @@ export const SecondaryPassword = (): JSX.Element => (
     onChange={console.log}
   />
 );
+
+export const Username = (): JSX.Element => (
+  <LabeledInput
+    variant="secondary"
+    label="username"
+    placeholder=""
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);
+
+export const ConfirmPassword = (): JSX.Element => (
+  <LabeledInput
+    variant="secondary"
+    label="confirm password"
+    placeholder=""
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);

@@ -10,4 +10,4 @@ export default {
   },
 } as Meta;
 
-export const Default = (): JSX.Element => <Login />;
+export const LoginPage = (): JSX.Element => <Login />;

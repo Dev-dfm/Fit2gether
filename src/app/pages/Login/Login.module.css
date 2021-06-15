@@ -23,18 +23,23 @@
 .designElement {
   overflow: hidden;
   z-index: 2;
+  max-height: 25em;
 }
 
 .main,
-.logo {
+.header {
   z-index: 3;
 }
 
-.logo {
+.header {
   display: flex;
   justify-content: center;
   color: var(--primary-color);
   padding-top: 5em;
+}
+
+.logo {
+  width: 3.5em;
 }
 
 .logo__text {
@@ -56,6 +61,7 @@
   justify-content: center;
   text-align: center;
   gap: 1em;
+  padding: 0 2em;
 }
 
 .form__link {

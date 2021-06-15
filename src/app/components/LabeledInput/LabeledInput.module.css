@@ -7,7 +7,7 @@
   font-family: var(--font-family);
   font-size: 1rem;
   color: var(--secondary-text-color);
-  width: clamp(23em, 70%, 30em);
+  width: 100%;
   padding: 1.1em 0.5em 0.5em 1.5em;
   margin: 0.5em 0;
 }
@@ -65,5 +65,5 @@
 .container__input--secondary:focus + .container__placeholder--secondary,
 .container__input--secondary:not(:placeholder-shown).container__input--secondary:not(:focus)
   + .container__placeholder--secondary {
-  color: var(--border-color);
+  color: var(--tertiary-text-color);
 }

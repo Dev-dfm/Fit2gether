@@ -1,13 +1,12 @@
 import React from 'react';
-import Login from './Login';
+import Register from './Register';
 import { Meta } from '@storybook/react';
 
 export default {
-  title: 'Page/Login',
-  component: Login,
+  title: 'Page/Register',
   parameters: {
     layout: 'fullscreen',
   },
 } as Meta;
 
-export const Default = (): JSX.Element => <Login />;
+export const Registration = (): JSX.Element => <Register />;

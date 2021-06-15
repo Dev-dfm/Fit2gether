@@ -1,0 +1,45 @@
+.registerForm {
+  height: 100vh;
+  background-image: url(/register.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  position: relative;
+  grid-template-rows: auto 1fr auto;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.registerForm__header,
+.registerForm__main {
+  z-index: 3;
+}
+
+.registerForm__header {
+  color: var(--primary-color);
+  padding: 1.5em 1em;
+}
+
+.registerForm__logo {
+  margin: 0 auto;
+  padding-top: 1em;
+  width: 8em;
+}
+
+.registerForm__form {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 30em;
+  display: grid;
+  height: 70%;
+}

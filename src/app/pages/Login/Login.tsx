@@ -12,14 +12,15 @@ function Login(): JSX.Element {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    alert(`You entered ${email}:${password}`);
   }
 
   return (
     <div className={styles.container}>
       <div className={styles.overlay}></div>
-      <header className={styles.logo}>
-        <Logo />
+      <header className={styles.header}>
+        <div className={styles.logo}>
+          <Logo />
+        </div>
         <span className={styles.logo__text}>
           it<span className={styles.logo__number}>2</span>gether
         </span>
@@ -27,7 +28,7 @@ function Login(): JSX.Element {
 
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
-          <div>
+          <div className={styles.form__labeledInput}>
             <LabeledInput
               variant="primary"
               placeholder="&nbsp;"

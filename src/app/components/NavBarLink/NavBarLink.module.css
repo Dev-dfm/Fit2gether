@@ -1,0 +1,38 @@
+.navBarItem {
+  display: grid;
+  justify-content: center;
+  height: 3.75em;
+  width: 3.75em;
+  border-radius: 100%;
+  z-index: 1;
+  cursor: pointer;
+  transition: ease-in-out 400ms;
+}
+
+.navBarItem__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-size: 0.6em;
+  font-weight: bold;
+  width: 3.75rem;
+}
+
+.navBarItem--active {
+  transform: translateY(-60%);
+  z-index: 100;
+  color: var(--secondary-text-color);
+  transition: ease-in-out 400ms;
+}
+
+.navBarItem--active > .navBarItem__link {
+  color: var(--secondary-text-color);
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  transition: all 300ms;
+}

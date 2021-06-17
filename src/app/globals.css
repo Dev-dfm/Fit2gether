@@ -34,8 +34,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-family);
-  color: var(--text-color);
-  background-color: var(--secondary-text-color);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 a {

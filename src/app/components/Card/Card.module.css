@@ -1,0 +1,89 @@
+.card {
+  display: flex;
+  margin: 0 auto;
+  max-width: 30em;
+  border-radius: 2em;
+  overflow: hidden;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.2);
+  color: var(--tertiary-text-color);
+}
+
+.imageFrame {
+  position: relative;
+  height: auto;
+  flex-basis: 50%;
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+}
+
+.imageFrame::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    105deg,
+    transparent,
+    var(--secondary-text-color) 90%
+  );
+  opacity: 60%;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/boxing.jpeg);
+}
+
+.card__article {
+  flex-basis: 60%;
+  padding: 1em 2em 1em 0;
+}
+
+.card__header {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  gap: 4em;
+}
+
+.card__title h2 {
+  margin: 0;
+  padding: 0.5em;
+}
+
+.card__title p {
+  margin: 0;
+  padding: 0;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card__infoIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.card__infoIcon_date {
+  color: var(--primary-color);
+  font-size: 2em;
+}
+
+.card__infoIcon_timeDist {
+  color: var(--primary-color);
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 2em;
+}

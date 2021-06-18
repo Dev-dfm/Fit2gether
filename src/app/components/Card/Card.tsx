@@ -24,7 +24,6 @@ export default function Card({
   return (
     <div className={styles.card}>
       <div className={styles.imageFrame}>
-        {/* <img className={styles.card__image} src="/boxing.jpeg" /> */}
         <div className={styles.image}></div>
       </div>
 

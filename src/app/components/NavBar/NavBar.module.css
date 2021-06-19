@@ -5,13 +5,12 @@
   background-color: var(--secondary-text-color);
   padding: 0.5em 0;
   position: relative;
-  width: 500px;
 }
 
 .drop {
   position: absolute;
   top: 0;
-  width: 7.5em;
+  width: 8em;
   justify-content: center;
   transition: ease-in-out 400ms;
   color: rgba(0, 0, 0, 0.5);

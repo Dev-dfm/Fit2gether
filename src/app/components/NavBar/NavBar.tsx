@@ -12,12 +12,23 @@ import { useLocation } from 'react-router-dom';
 const translateDrop: {
   [path: string]: number;
 } = {
-  '/main': -156,
-  '/profile': -77,
+  '/main': (-100 / 6) * 2,
+  '/profile': (-100 / 6) * 1,
   '/add': 0,
-  '/search': 77,
-  '/': 156,
+  '/search': (100 / 6) * 1,
+  '/': (100 / 6) * 2,
 };
+
+const translateDropPixel: {
+  [path: string]: number;
+} = {
+  '/main': -10,
+  '/profile': -5,
+  '/add': 0,
+  '/search': 5,
+  '/': 10,
+};
+
 export default function NavBar(): JSX.Element {
   const location = useLocation();
   const activePath: string = location.pathname;
@@ -60,7 +71,7 @@ export default function NavBar(): JSX.Element {
       <div
         className={styles.drop}
         style={{
-          transform: `translateX(${translateDrop[activePath]}%)`,
+          transform: `translateX(calc(${translateDropPixel[activePath]}px + ${translateDrop[activePath]}vw))`,
         }}
       >
         <NavBarDrop />

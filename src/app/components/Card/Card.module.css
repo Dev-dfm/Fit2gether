@@ -1,7 +1,7 @@
 .card {
   display: flex;
   margin: 0.5em;
-  width: 80vw;
+  width: 90vw;
   max-width: 40em;
   border-radius: 2em;
   overflow: hidden;
@@ -54,7 +54,7 @@
   padding-left: 1em;
 }
 
-.card__title h3 {
+.card__title h1 {
   margin: 0;
   padding: 0.5em 0 0.2em 0;
 }

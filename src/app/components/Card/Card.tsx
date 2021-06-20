@@ -30,7 +30,7 @@ export default function Card({
       <article className={styles.card__article}>
         <section className={styles.card__header}>
           <div className={styles.card__title}>
-            <h3>{groupTitle}</h3>
+            <h1>{groupTitle}</h1>
             <p>{location}</p>
           </div>
           <div className={styles.icon}>

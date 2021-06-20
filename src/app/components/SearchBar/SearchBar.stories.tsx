@@ -1,4 +1,3 @@
-// SearchBar.stories.tsx
 import React from 'react';
 import SearchBar from './SearchBar';
 

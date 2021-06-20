@@ -1,14 +1,14 @@
-/* SearchBar.modules.css */
 .searchBar {
   display: flex;
   border-radius: 50em;
-  background: white;
+  background: var(--secondary-color);
   height: 2.5em;
   width: 2.5em;
   position: relative;
-  transition: width 1000ms cubic-bezier(0.19, 0.89, 0.32, 1.05);
+  transition: width 400ms cubic-bezier(0.19, 0.89, 0.32, 1.05);
   overflow: hidden;
   align-items: center;
+  box-shadow: 0 0 10px rgb(233, 196, 106, 0.7);
 }
 
 .searchBar__input {
@@ -45,6 +45,7 @@
 
 .searchBar:focus-within {
   width: 100%;
+  box-shadow: none;
 }
 
 .searchBar:focus-within .searchBar__input {
@@ -56,4 +57,13 @@
   background: var(--primary-color);
   color: var(--secondary-text-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  border: hidden;
+}
+
+.searchBar__icon {
+  color: var(--tertiary-color);
+}
+
+.searchBar:focus-within .searchBar__icon {
+  color: white;
 }

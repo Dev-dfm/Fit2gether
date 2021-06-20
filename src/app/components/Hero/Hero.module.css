@@ -17,4 +17,9 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+  align-items: flex-end;
+}
+
+.hero__filter {
+  transform: translateY(3.3em);
 }

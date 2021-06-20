@@ -34,11 +34,10 @@
   left: 0;
   right: 0;
   z-index: 1;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .radio__input:checked + .radio__button {
   color: var(--secondary-text-color);
-  border-color: transparent;
-  transition: all 0.3s ease-in-out;
+  border-color: var(--primary-color);
 }

@@ -4,6 +4,7 @@ import Login from './pages/Login/Login';
 import styles from './App.module.css';
 import Register from './pages/Register/Register';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
+import Main from './pages/Main/Main';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -14,6 +15,7 @@ const routes: CustomRouteProps[] = [
   { path: '/', Component: Login, exact: true },
   { path: '/register', Component: Register },
   { path: '/forgotPassword', Component: ForgotPassword },
+  { path: '/main', Component: Main },
 ];
 
 function App(): JSX.Element {

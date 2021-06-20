@@ -22,11 +22,11 @@ const translateDrop: {
 const translateDropPixel: {
   [path: string]: number;
 } = {
-  '/main': -10,
-  '/profile': -5,
+  '/main': -20,
+  '/profile': -10,
   '/add': 0,
-  '/search': 5,
-  '/': 10,
+  '/search': 10,
+  '/': 20,
 };
 
 export default function NavBar(): JSX.Element {

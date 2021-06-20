@@ -3,6 +3,7 @@
   display: grid;
   align-content: space-between;
   background: var(--primary-bg-color);
+  overflow: hidden;
 }
 
 .hero {
@@ -43,6 +44,7 @@
 
 .form {
   padding: 2em 0;
+  width: 90%;
   max-width: 50em;
   margin: 0 auto;
   scrollbar-width: none;

@@ -1,0 +1,63 @@
+.container {
+  height: 100vh;
+  display: grid;
+  align-content: space-between;
+  background: var(--primary-bg-color);
+}
+
+.hero {
+  background-color: var(--secondary-color);
+  display: grid;
+  position: relative;
+  width: 100%;
+}
+
+.backButton {
+  padding: 1em 0 0 1em;
+}
+
+.hero h1 {
+  color: var(--primary-color);
+  font-size: 1.4em;
+  position: absolute;
+  justify-self: center;
+  padding: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+.uploadButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--tertiary-color);
+  text-align: center;
+  padding: 5em;
+}
+
+.form {
+  padding: 2em 0;
+  max-width: 50em;
+  margin: 0 auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.form::-webkit-scrollbar {
+  display: none;
+}
+
+.createGroupButton {
+  padding: 3em 0;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 20em;
+}

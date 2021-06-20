@@ -18,13 +18,19 @@
   background: var(--secondary-color);
 }
 
-.button--primary:focus {
+.button--tertiary {
+  padding: 0.5em 0;
+  font-size: 1em;
+}
+
+.button--primary:active,
+.button--tertiary:active {
   background: var(--primary-button-color);
   transform: scale(1.025);
   box-shadow: 0 0 0.7em 0 var(--primary-button-color);
 }
 
-.button--secondary:focus {
+.button--secondary:active {
   background: var(--secondary-button-color);
   transform: scale(1.025);
   box-shadow: 0 0 0.7em 0 var(--secondary-button-color);

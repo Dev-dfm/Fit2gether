@@ -22,8 +22,17 @@
   background: rgba(255, 255, 255, 0.31);
 }
 
+.container__input--tertiary {
+  color: var(--tertiary-text-color);
+  border: thin solid transparent;
+}
+
 .container__input--secondary:focus {
   border: thin solid var(--border-color);
+}
+
+.container__input--tertiary:focus {
+  border: thin solid var(--primary-color);
 }
 
 .container__placeholder {
@@ -42,6 +51,10 @@
 
 .container__placeholder--secondary {
   color: var(--secondary-text-color);
+}
+
+.container__placeholder--tertiary {
+  color: var(--input-text-color);
 }
 
 .container__input:focus {
@@ -66,4 +79,10 @@
 .container__input--secondary:not(:placeholder-shown).container__input--secondary:not(:focus)
   + .container__placeholder--secondary {
   color: var(--tertiary-text-color);
+}
+
+.container__input--tertiary:focus + .container__placeholder--tertiary,
+.container__input--tertiary:not(:placeholder-shown).container__input--tertiary:not(:focus)
+  + .container__placeholder--tertiary {
+  color: var(--primary-color);
 }

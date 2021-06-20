@@ -71,3 +71,91 @@ export const ConfirmPassword = (): JSX.Element => (
     onChange={console.log}
   />
 );
+
+export const GroupName = (): JSX.Element => (
+  <LabeledInput
+    variant="tertiary"
+    label="Group name"
+    placeholder="&nbsp;"
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);
+
+export const Sport = (): JSX.Element => (
+  <LabeledInput
+    variant="tertiary"
+    label="Sport"
+    placeholder="&nbsp;"
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);
+
+export const Date = (): JSX.Element => (
+  <LabeledInput
+    variant="tertiary"
+    label="Date"
+    placeholder="&nbsp;"
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);
+
+export const Time = (): JSX.Element => (
+  <LabeledInput
+    variant="tertiary"
+    label="Time"
+    placeholder="&nbsp;"
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);
+
+export const Location = (): JSX.Element => (
+  <LabeledInput
+    variant="tertiary"
+    label="Locartion"
+    placeholder="&nbsp;"
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);
+
+export const ParticipantsLimit = (): JSX.Element => (
+  <LabeledInput
+    variant="tertiary"
+    label="Limit for participants"
+    placeholder="&nbsp;"
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);
+
+export const Equipment = (): JSX.Element => (
+  <LabeledInput
+    variant="tertiary"
+    label="Limit for participants"
+    placeholder="&nbsp;"
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);
+
+export const Description = (): JSX.Element => (
+  <LabeledInput
+    variant="tertiary"
+    label="Description"
+    placeholder="&nbsp;"
+    value=""
+    required={true}
+    onChange={console.log}
+  />
+);

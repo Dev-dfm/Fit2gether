@@ -1,0 +1,32 @@
+.groupDetails__schedule {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 3em;
+  align-items: center;
+}
+
+.groupDetails__date,
+.groupDetails__location {
+  display: flex;
+  flex-direction: column;
+}
+.groupDetails__date p,
+.groupDetails__location p {
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+.groupDetails__month {
+  font-size: 0.8rem;
+  align-self: center;
+}
+
+.groupDetails__day {
+  font-size: 1.5em;
+  color: var(--primary-color);
+}
+
+.groupDetails__locationTitle,
+.groupDetails__icon {
+  color: var(--primary-color);
+}

@@ -15,3 +15,6 @@ export const RegisterButton = (): JSX.Element => (
 export const ResetButton = (): JSX.Element => (
   <Button variant="primary">Reset password</Button>
 );
+export const JoinButton = (): JSX.Element => (
+  <Button variant="tertiary">Join</Button>
+);

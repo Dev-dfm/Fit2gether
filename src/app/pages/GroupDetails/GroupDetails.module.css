@@ -1,0 +1,57 @@
+.container {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  background: white;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+}
+
+.header {
+  background-image: url(/boxing.jpeg);
+  width: 100%;
+  height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1em;
+  position: fixed;
+}
+
+.groupDetails {
+  padding: 0 3em;
+  margin-top: 30vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: grid;
+  max-width: 100em;
+}
+
+.groupDetails::-webkit-scrollbar {
+  display: none;
+}
+
+.groupDetails__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.groupDetails__date {
+  line-height: 1em;
+}
+
+.groupDetails__article h3 {
+  color: var(--primary-color);
+}
+
+.joinButton {
+  position: absolute;
+  width: 6em;
+  right: 1em;
+  bottom: 1em;
+}

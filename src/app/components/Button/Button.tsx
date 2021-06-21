@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 
 type ButtonProps = {
   children: ReactNode;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'tertiary';
 };
 
 export default function Button({

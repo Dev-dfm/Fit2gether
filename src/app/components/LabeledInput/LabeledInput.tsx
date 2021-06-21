@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './LabeledInput.module.css';
 
 type LabeledInputProps = {
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'tertiary';
   label: string;
   placeholder: string;
   value: string;

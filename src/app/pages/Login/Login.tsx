@@ -48,11 +48,11 @@ function Login(): JSX.Element {
               required
             />
           </div>
-          <Link to="#" className={styles.form__link}>
+          <Link to="/forgotPassword" className={styles.form__link}>
             Forgot password?
           </Link>
           <Button variant="secondary">Log in</Button>
-          <Link to="#" className={styles.form__link}>
+          <Link to="/register" className={styles.form__link}>
             <span className={styles.form__linkSpan}>Not a member?</span> Sign up
           </Link>
         </form>

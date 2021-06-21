@@ -35,7 +35,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-family);
-  background-color: white;
+  background-color: var(--primary-bg-color);
 }
 
 a {

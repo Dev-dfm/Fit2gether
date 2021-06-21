@@ -49,10 +49,10 @@ export default function NavBar(): JSX.Element {
       />
 
       <NavBarLink
-        active={activePath === '/add'}
+        active={activePath === '/createGroup'}
         icon={<PlusIcon />}
         text="Add"
-        link="/add"
+        link="/createGroup"
       />
 
       <NavBarLink

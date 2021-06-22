@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import path from 'path';
-import { connectDB } from './utils/database';
-import { readGroups, readGroup, saveGroup, deleteGroup } from './utils/groups';
+import { connectDB } from './server/database';
+import router from './server/routes';
 
 if (process.env.MONGODB_URL === undefined) {
   throw new Error('Missing env MONGODB_URL');
@@ -14,25 +14,7 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/api/groups', async (_req, res) => {
-  const groups = await readGroups();
-  res.json(groups);
-});
-
-app.get('/api/groups/:groupname', async (req, res) => {
-  const groups = await readGroup(req.params.groupname);
-  res.json(groups);
-});
-
-app.post('/api/groups', async (req, res) => {
-  await saveGroup(req.body);
-  res.status(200).json(req.body);
-});
-
-app.delete('/api/groups/:groupname', async (req, res) => {
-  await deleteGroup(req.params.groupname);
-  res.send('Group has been deleted');
-});
+app.use('/api', router);
 
 // Serve storybook production bundle
 app.use('/storybook', express.static('dist/storybook'));

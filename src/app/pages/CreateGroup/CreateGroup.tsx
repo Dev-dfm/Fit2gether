@@ -5,7 +5,7 @@ import UploadGroupImage from '../../components/Icons/UploadGroupImage';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import NavBar from '../../components/NavBar/NavBar';
 import styles from './CreateGroup.module.css';
-import { postGroup } from '../../../utils/api';
+import { postGroup } from '../../utils/api';
 import { Group } from '../../../types';
 
 export default function CreateGroup(): JSX.Element {

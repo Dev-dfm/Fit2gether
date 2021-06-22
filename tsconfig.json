@@ -22,8 +22,8 @@
   },
   "include": [
     "./src/app",
-    "src/utils",
-    "src/utils/database.ts",
-    "src/utils/groups.ts"
+    "src/app/utils",
+    "src/server/database.ts",
+    "src/server/groups.ts"
   ]
 }

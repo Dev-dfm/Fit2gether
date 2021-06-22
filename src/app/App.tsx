@@ -6,6 +6,7 @@ import Register from './pages/Register/Register';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 import Main from './pages/Main/Main';
 import CreateGroup from './pages/CreateGroup/CreateGroup';
+import GroupDetails from './pages/GroupDetails/GroupDetails';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -18,6 +19,7 @@ const routes: CustomRouteProps[] = [
   { path: '/forgotPassword', Component: ForgotPassword },
   { path: '/main', Component: Main },
   { path: '/createGroup', Component: CreateGroup },
+  { path: '/groupDetails', Component: GroupDetails },
 ];
 
 function App(): JSX.Element {

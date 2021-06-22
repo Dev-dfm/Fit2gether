@@ -1,4 +1,4 @@
-import { Group } from '../types';
+import { Group } from '../../types';
 
 export async function postGroup(group: Group): Promise<Group> {
   const response = await fetch('/api/groups', {

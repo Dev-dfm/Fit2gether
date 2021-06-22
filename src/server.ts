@@ -26,7 +26,7 @@ app.get('/api/groups/:groupname', async (req, res) => {
 
 app.post('/api/groups', async (req, res) => {
   await saveGroup(req.body);
-  res.send('Group saved in database');
+  res.status(200).json(req.body);
 });
 
 app.delete('/api/groups/:groupname', async (req, res) => {

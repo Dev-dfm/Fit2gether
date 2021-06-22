@@ -5,7 +5,7 @@ type LabeledInputProps = {
   variant?: 'primary' | 'secondary' | 'tertiary';
   label: string;
   placeholder: string;
-  value: string;
+  value: string | number;
   type?: string;
   required?: boolean;
   onChange: (value: string) => void;

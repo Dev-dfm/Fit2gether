@@ -1,0 +1,27 @@
+@port = {{$dotenv PORT}}
+@baseUrl = http://localhost:{{port}}
+
+### Request all groups
+GET {{baseUrl}}/api/groups
+Content-Type: application/json
+
+### Request a group
+GET {{baseUrl}}/api/groups/Boxing
+Content-Type: application/json
+
+### Add a new group
+POST {{baseUrl}}/api/groups
+Content-Type: application/json
+{
+  "groupname": "Boxing",
+  "sport": "Boxing",
+  "date": "2021/Jan/17",
+  "time": "18:00",
+  "location": "Aachener Weiher",
+  "limit": 10,
+  "equipment": "Boxing gloves",
+  "description": "Have fun"
+}
+
+### Delete a credential
+GET {{baseUrl}}/api/groups/Boxing

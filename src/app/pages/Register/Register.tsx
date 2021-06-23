@@ -4,15 +4,32 @@ import BackButton from '../../components/BackButton/BackButton';
 import Logo from '../../components/Icons/Logo';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import Button from '../../components/Button/Button';
+import { User } from '../../../types';
+import { postUser } from '../../utils/api';
+import { useHistory } from 'react-router-dom';
 
 export default function Register(): JSX.Element {
+  const history = useHistory();
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [validationErrorMessage, setValidationErrorMessage] = useState<
+    string | null
+  >(null);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    setValidationErrorMessage(null);
+    if (password !== confirmPassword) {
+      setValidationErrorMessage('Passwords did not match');
+      return;
+    }
+
+    const user: User = { userName, email, password, confirmPassword };
+    await postUser(user);
+    history.push('/main');
   }
 
   return (
@@ -65,8 +82,14 @@ export default function Register(): JSX.Element {
               required
             />
           </div>
+
           <div>
             <Button variant="primary">Register</Button>
+            {validationErrorMessage && (
+              <div className={styles.registerForm__error}>
+                Error: {validationErrorMessage}
+              </div>
+            )}
           </div>
         </form>
       </main>

@@ -5,16 +5,16 @@
 GET {{baseUrl}}/api/groups
 Content-Type: application/json
 
-### Request a group
-GET {{baseUrl}}/api/groups/groupname
+### Request group
+GET {{baseUrl}}/api/groups/Boxing
 Content-Type: application/json
 
-### Add a new group
+### Add new group
 POST {{baseUrl}}/api/groups HTTP/1.1
 Content-Type: application/json
 
 {
-  "groupName": "Boxing",
+  "groupname": "Boxing",
   "sport": "Boxing",
   "date": "2021/Jan/17",
   "time": "18:00",
@@ -24,5 +24,29 @@ Content-Type: application/json
   "description": "Have fun"
 }
 
-### Delete a credential
-GET {{baseUrl}}/api/groups/groupname
+### Delete group
+DELETE {{baseUrl}}/api/groups/Boxing
+
+
+# USERS
+### Request all users
+GET {{baseUrl}}/api/users
+Content-Type: application/json
+
+### Request user
+GET {{baseUrl}}/api/users/Jonni
+Content-Type: application/json
+
+### Add new user
+POST {{baseUrl}}/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "userName": "Jonni",
+  "email": "john.doe@gmail.com",
+  "password": "123",
+  "confirmPassword": "123"
+}
+
+### Delete a user
+DELETE {{baseUrl}}/api/users/Jonni

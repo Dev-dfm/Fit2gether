@@ -10,16 +10,16 @@ export const readUsers = async (): Promise<User[]> => {
   return await getUsersCollection().find().sort({ userName: 1 }).toArray();
 };
 
-export const readUser = async (userName: string): Promise<User | undefined> => {
-  const user = await getUsersCollection().findOne({ userName });
+export const readUser = async (user: Partial<User>): Promise<User | null> => {
+  const result = await getUsersCollection().findOne(user);
   if (!user) {
     throw new Error('Can`t find user');
   }
-  return user;
+  return result;
 };
 
 export const saveUser = async (user: User): Promise<void> => {
-  await getUsersCollection().insertOne({ ...user });
+  await getUsersCollection().insertOne(user);
 };
 
 export const deleteUser = async (userName: string): Promise<boolean> => {

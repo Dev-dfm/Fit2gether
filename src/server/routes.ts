@@ -32,7 +32,7 @@ router.get('/users', async (_req, res) => {
 });
 
 router.get('/users/:userName', async (req, res) => {
-  const users = await readUser(req.params.userName);
+  const users = await readUser({ userName: req.params.userName });
   res.json(users);
 });
 
@@ -44,6 +44,22 @@ router.post('/users', async (req, res) => {
 router.delete('/users/:userName', async (req, res) => {
   await deleteUser(req.params.userName);
   res.send('User has been deleted');
+});
+
+// User login
+router.post('/users/login', async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+    const user = await readUser({ email, password });
+    if (!user) {
+      res.status(404).send('Email or password incorrect');
+      return;
+    }
+
+    res.status(200).json(user);
+  } catch (error) {
+    next(error);
+  }
 });
 
 export default router;

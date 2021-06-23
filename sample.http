@@ -50,3 +50,21 @@ Content-Type: application/json
 
 ### Delete a user
 DELETE {{baseUrl}}/api/users/Jonni
+
+### Correct login
+POST {{baseUrl}}/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "john.doe@gmail.com",
+  "password": "123"
+}
+
+### Incorrect login
+POST {{baseUrl}}/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "john.doe@gmail.com",
+  "password": "789"
+}

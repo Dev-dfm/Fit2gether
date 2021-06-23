@@ -13,13 +13,18 @@ function Login(): JSX.Element {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const user: Partial<User> = { email, password };
-    await postLoginUser(user);
-    history.push('/main');
+    try {
+      const user: Partial<User> = { email, password };
+      await postLoginUser(user);
+      history.push('/main');
+    } catch (error) {
+      setErrorMessage(error.toString());
+    }
   }
 
   return (
@@ -60,6 +65,9 @@ function Login(): JSX.Element {
             Forgot password?
           </Link>
           <Button variant="secondary">Log in</Button>
+
+          {errorMessage && <div>Error: {errorMessage}</div>}
+
           <Link to="/register" className={styles.form__link}>
             <span className={styles.form__linkSpan}>Not a member?</span> Sign up
           </Link>

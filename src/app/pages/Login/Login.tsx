@@ -1,17 +1,28 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { User } from '../../../types';
 import Button from '../../components/Button/Button';
 import DesginElementLogin from '../../components/DesignElement/DesginElementLogin';
 import Logo from '../../components/Icons/Logo';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
+import { postLoginUser } from '../../utils/api';
+
 import styles from './Login.module.css';
 
 function Login(): JSX.Element {
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    const user: Partial<User> = { email, password };
+    if (!user) {
+      throw new Error('Error');
+    }
+    await postLoginUser(user);
+    history.push('/main');
   }
 
   return (

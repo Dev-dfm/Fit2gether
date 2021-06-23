@@ -43,3 +43,12 @@
   display: grid;
   height: 70%;
 }
+
+.registerForm__error {
+  color: red;
+  text-align: center;
+}
+
+.registerForm__error button {
+  background-color: red;
+}

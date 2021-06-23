@@ -9,7 +9,7 @@ import { postGroup } from '../../utils/api';
 import { Group } from '../../../types';
 
 export default function CreateGroup(): JSX.Element {
-  const [groupName, setGroupName] = useState('');
+  const [groupname, setGroupname] = useState('');
   const [sport, setSport] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
@@ -22,7 +22,7 @@ export default function CreateGroup(): JSX.Element {
     event.preventDefault();
 
     const group: Group = {
-      groupName,
+      groupname,
       sport,
       date,
       time,
@@ -31,7 +31,6 @@ export default function CreateGroup(): JSX.Element {
       equipment,
       description,
     };
-    console.log(group);
     await postGroup(group);
   }
 
@@ -53,8 +52,8 @@ export default function CreateGroup(): JSX.Element {
           placeholder="&nbsp;"
           label="Group name"
           type="text"
-          value={groupName}
-          onChange={setGroupName}
+          value={groupname}
+          onChange={setGroupname}
           required
         />
         <LabeledInput

@@ -1,17 +1,30 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { User } from '../../../types';
 import Button from '../../components/Button/Button';
 import DesginElementLogin from '../../components/DesignElement/DesginElementLogin';
 import Logo from '../../components/Icons/Logo';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
+import { postLoginUser } from '../../utils/api';
+
 import styles from './Login.module.css';
 
 function Login(): JSX.Element {
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    try {
+      const user: Partial<User> = { email, password };
+      await postLoginUser(user);
+      history.push('/main');
+    } catch (error) {
+      setErrorMessage(error.toString());
+    }
   }
 
   return (
@@ -52,6 +65,13 @@ function Login(): JSX.Element {
             Forgot password?
           </Link>
           <Button variant="secondary">Log in</Button>
+
+          {errorMessage && (
+            <div className={styles.registerForm__error}>
+              Error: {errorMessage}
+            </div>
+          )}
+
           <Link to="/register" className={styles.form__link}>
             <span className={styles.form__linkSpan}>Not a member?</span> Sign up
           </Link>

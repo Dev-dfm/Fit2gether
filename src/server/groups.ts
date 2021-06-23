@@ -1,5 +1,10 @@
-import { getGroupsCollection } from './database';
+import { Collection } from 'mongodb';
 import type { Group } from '../types';
+import { getCollection } from './database';
+
+export const getGroupsCollection = (): Collection<Group> => {
+  return getCollection<Group>('groups');
+};
 
 export const readGroups = async (): Promise<Group[]> => {
   return await getGroupsCollection().find().sort({ groupname: 1 }).toArray();
@@ -18,9 +23,7 @@ export const saveGroup = async (group: Group): Promise<void> => {
 };
 
 export const deleteGroup = async (groupname: string): Promise<boolean> => {
-  const result = await getGroupsCollection().deleteOne({
-    groupname: groupname,
-  });
+  const result = await getGroupsCollection().deleteOne({ groupname });
   if (result.deletedCount === undefined) {
     return false;
   }

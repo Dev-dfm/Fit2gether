@@ -18,9 +18,6 @@ function Login(): JSX.Element {
     event.preventDefault();
 
     const user: Partial<User> = { email, password };
-    if (!user) {
-      throw new Error('Error');
-    }
     await postLoginUser(user);
     history.push('/main');
   }

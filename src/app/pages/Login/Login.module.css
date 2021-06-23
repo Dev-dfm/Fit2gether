@@ -82,7 +82,6 @@
   top: 20em;
   justify-self: center;
   border-radius: 0.5em;
-  transform: translateX(0%);
   animation: rotate 0.5s ease;
 }
 

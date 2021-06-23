@@ -98,6 +98,7 @@ export default function CreateGroup(): JSX.Element {
           placeholder="&nbsp;"
           label="Limit of participants"
           type="number"
+          min={0}
           value={limit}
           onChange={(value) => setLimit(Number(value))}
           required

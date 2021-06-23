@@ -5,6 +5,8 @@ import UploadGroupImage from '../../components/Icons/UploadGroupImage';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import NavBar from '../../components/NavBar/NavBar';
 import styles from './CreateGroup.module.css';
+import { postGroup } from '../../utils/api';
+import { Group } from '../../../types';
 
 export default function CreateGroup(): JSX.Element {
   const [groupName, setGroupName] = useState('');
@@ -12,12 +14,25 @@ export default function CreateGroup(): JSX.Element {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [location, setLocation] = useState('');
-  const [limit, setLimit] = useState('');
+  const [limit, setLimit] = useState(0);
   const [equipment, setEquipment] = useState('');
   const [description, setDescription] = useState('');
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    const group: Group = {
+      groupName,
+      sport,
+      date,
+      time,
+      location,
+      limit,
+      equipment,
+      description,
+    };
+    console.log(group);
+    await postGroup(group);
   }
 
   return (
@@ -83,8 +98,9 @@ export default function CreateGroup(): JSX.Element {
           placeholder="&nbsp;"
           label="Limit of participants"
           type="number"
+          min={0}
           value={limit}
-          onChange={setLimit}
+          onChange={(value) => setLimit(Number(value))}
           required
         />
         <LabeledInput

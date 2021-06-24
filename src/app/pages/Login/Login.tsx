@@ -67,9 +67,7 @@ function Login(): JSX.Element {
           <Button variant="secondary">Log in</Button>
 
           {errorMessage && (
-            <div className={styles.registerForm__error}>
-              Error: {errorMessage}
-            </div>
+            <div className={styles.registerForm__error}>{errorMessage}</div>
           )}
 
           <Link to="/register" className={styles.form__link}>

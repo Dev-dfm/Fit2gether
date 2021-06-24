@@ -22,24 +22,24 @@ function ForgotPassword(): JSX.Element {
   }
 
   return (
-    <div className={styles.passwordForm}>
+    <div className={styles.container}>
       <div className={styles.overlay}></div>
-      <header className={styles.passwordForm__header}>
+      <header className={styles.header}>
         <BackButton />
-        <div className={styles.passwordForm__logo}>
+        <div className={styles.header__logo}>
           <Logo />
         </div>
       </header>
 
-      <main className={styles.passwordForm__main}>
-        <article className={styles.passwordForm__article}>
-          <h4 className={styles.passwordForm_title}>Forgot password?</h4>
+      <main className={styles.main}>
+        <article>
+          <h4 className={styles.main__title}>Forgot password?</h4>
           <p>
             Don't worry. Resetting your password is easy. Just fill in your
             email and we'll send you a link to reset your password.
           </p>
         </article>
-        <form onSubmit={handleSubmit} className={styles.passwordForm_form}>
+        <form onSubmit={handleSubmit} className={styles.main__form}>
           <div>
             <LabeledInput
               variant="secondary"
@@ -52,10 +52,9 @@ function ForgotPassword(): JSX.Element {
             />
           </div>
           {isSend && (
-            <p className={styles.passwordForm__Notification}>
-              {' '}
+            <p>
               Your password was reseted. Please check your Email. You will be
-              redirected to the login page.{' '}
+              redirected to the login page.
             </p>
           )}
           <Button variant="primary">Reset password</Button>

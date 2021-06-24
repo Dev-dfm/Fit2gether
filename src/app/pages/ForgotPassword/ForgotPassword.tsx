@@ -1,46 +1,69 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import BackButton from '../../components/BackButton/BackButton';
 import Button from '../../components/Button/Button';
 import Logo from '../../components/Icons/Logo';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import styles from './ForgotPassword.module.css';
 
-export default function ForgotPassword(): JSX.Element {
+function ForgotPassword(): JSX.Element {
+  const history = useHistory();
   const [email, setEmail] = useState('');
+  const [isSend, setIsSend] = useState(false);
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    setIsSend(true);
+
+    setTimeout(() => {
+      history.push('/');
+    }, 6000);
+  }
 
   return (
-    <div className={styles.passwordForm}>
+    <div className={styles.container}>
       <div className={styles.overlay}></div>
-      <header className={styles.passwordForm__header}>
+      <header className={styles.header}>
         <BackButton />
-        <div className={styles.passwordForm__logo}>
+        <div className={styles.header__logo}>
           <Logo />
         </div>
       </header>
 
-      <main className={styles.passwordForm__main}>
-        <article className={styles.passwordForm__article}>
-          <h4 className={styles.passwordForm_title}>Forgot password?</h4>
+      <main className={styles.main}>
+        <article>
+          <h4 className={styles.main__title}>Forgot password?</h4>
           <p>
-            Don't woory. Ressetting your password is easy. Just fill in your
+            Don't worry. Resetting your password is easy. Just fill in your
             email and we'll send you a link to reset your password.
           </p>
         </article>
-        <form className={styles.passwordForm_form}>
-          <LabeledInput
-            variant="secondary"
-            placeholder="&nbsp;"
-            label="email"
-            type="email"
-            value={email}
-            onChange={setEmail}
-            required
-          />
+        <form onSubmit={handleSubmit} className={styles.main__form}>
+          <div>
+            <LabeledInput
+              variant="secondary"
+              placeholder="&nbsp;"
+              label="email"
+              type="email"
+              value={email}
+              onChange={setEmail}
+              required
+            />
+          </div>
+          {isSend && (
+            <p>
+              Your password was reseted. Please check your Email. You will be
+              redirected to the login page.
+            </p>
+          )}
+          <Button disabled={isSend} variant="primary">
+            Reset password
+          </Button>
         </form>
-        <div className={styles.resetButton}>
-          <Button variant="primary">Reset password</Button>
-        </div>
       </main>
     </div>
   );
 }
+
+export default ForgotPassword;

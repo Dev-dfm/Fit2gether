@@ -11,10 +11,10 @@ function ForgotPassword(): JSX.Element {
   const [email, setEmail] = useState('');
   const [isSend, setIsSend] = useState(false);
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    setIsSend(!isSend);
+    setIsSend(true);
 
     setTimeout(() => {
       history.push('/');
@@ -57,7 +57,9 @@ function ForgotPassword(): JSX.Element {
               redirected to the login page.
             </p>
           )}
-          <Button variant="primary">Reset password</Button>
+          <Button disabled={isSend} variant="primary">
+            Reset password
+          </Button>
         </form>
       </main>
     </div>

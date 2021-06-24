@@ -5,12 +5,14 @@ export type ButtonProps = {
   children: ReactNode;
   variant?: 'primary' | 'secondary' | 'tertiary';
   onClick?: () => void;
+  disabled?: boolean;
 };
 
 export default function Button({
   children,
   variant,
   onClick,
+  disabled,
 }: ButtonProps): JSX.Element {
   return (
     <button
@@ -20,6 +22,7 @@ export default function Button({
           : styles.button
       }
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>

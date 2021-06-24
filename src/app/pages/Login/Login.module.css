@@ -74,7 +74,7 @@
   color: var(--secondary-text-color);
 }
 
-.registerForm__error {
+.form__error {
   position: absolute;
   padding: 0.8em;
   color: rgb(240, 240, 240);

@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  margin: 0.5em;
+  margin: 1.5em;
   width: 90vw;
   max-width: 40em;
   border-radius: 2em;
@@ -72,20 +72,20 @@
   font-size: 0.7em;
 }
 
-.card__infoIcon {
+.card__footerInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
 
-.card__infoIcon_date {
+.card__footerInfo_day {
   color: var(--primary-color);
   font-size: 2em;
   line-height: 1.8em;
 }
 
-.card__infoIcon_timeDist {
+.card__footerInfo_timeDist {
   color: var(--primary-color);
   font-size: 1.1em;
   font-weight: 500;

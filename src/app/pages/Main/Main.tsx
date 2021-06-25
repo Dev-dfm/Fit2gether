@@ -3,8 +3,23 @@ import styles from './Main.module.css';
 import Card from '../../components/Card/Card';
 import Hero from '../../components/Hero/Hero';
 import NavBar from '../../components/NavBar/NavBar';
+import useGroupCards from '../../hooks/useGroupCard';
 
 export default function Main(): JSX.Element {
+  const { groupCards, isLoading, errorMessage } = useGroupCards();
+
+  if (errorMessage) {
+    return <div>Error</div>;
+  }
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!groupCards) {
+    return <div>Group not found</div>;
+  }
+
   return (
     <div className={styles.container}>
       <header>
@@ -12,84 +27,16 @@ export default function Main(): JSX.Element {
       </header>
       <main className={styles.cards}>
         <div className={styles.card}>
-          <Card
-            groupTitle="Boxing"
-            location="Aachener Weiher"
-            month="Jan"
-            date={27}
-            time="18:00"
-            distance={5}
-          />
-        </div>
-        <div className={styles.card}>
-          <Card
-            groupTitle="Boxing"
-            location="Aachener Weiher"
-            month="Jan"
-            date={27}
-            time="18:00"
-            distance={5}
-          />
-        </div>
-        <div className={styles.card}>
-          <Card
-            groupTitle="Boxing"
-            location="Aachener Weiher"
-            month="Jan"
-            date={27}
-            time="18:00"
-            distance={5}
-          />
-        </div>
-        <div className={styles.card}>
-          <Card
-            groupTitle="Boxing"
-            location="Aachener Weiher"
-            month="Jan"
-            date={27}
-            time="18:00"
-            distance={5}
-          />
-        </div>
-        <div className={styles.card}>
-          <Card
-            groupTitle="Boxing"
-            location="Aachener Weiher"
-            month="Jan"
-            date={27}
-            time="18:00"
-            distance={5}
-          />
-        </div>
-        <div className={styles.card}>
-          <Card
-            groupTitle="Boxing"
-            location="Aachener Weiher"
-            month="Jan"
-            date={27}
-            time="18:00"
-            distance={5}
-          />
-        </div>
-        <div className={styles.card}>
-          <Card
-            groupTitle="Boxing"
-            location="Aachener Weiher"
-            month="Jan"
-            date={27}
-            time="18:00"
-            distance={5}
-          />
-        </div>
-        <div className={styles.card}>
-          <Card
-            groupTitle="Boxing"
-            location="Aachener Weiher"
-            month="Jan"
-            date={27}
-            time="18:00"
-            distance={5}
-          />
+          {groupCards.map((groupCard) => (
+            <Card
+              groupname={groupCard.groupname}
+              location={groupCard.location}
+              month={groupCard.month}
+              date={groupCard.date}
+              time={groupCard.time}
+              distance={groupCard.distance}
+            />
+          ))}
         </div>
       </main>
       <footer>

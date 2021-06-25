@@ -39,8 +39,8 @@ export default function CreateGroup(): JSX.Element {
       <header className={styles.hero}>
         <div className={styles.backButton}>
           <BackButton />
-          <h1>Create Group</h1>
         </div>
+        <h1>Create Group</h1>
         <button className={styles.uploadButton}>
           <UploadGroupImage />
           <p>Upload group image</p>
@@ -69,7 +69,7 @@ export default function CreateGroup(): JSX.Element {
           variant="tertiary"
           placeholder="&nbsp;"
           label="Date"
-          type="text"
+          type="date"
           value={date}
           onChange={setDate}
           required
@@ -78,7 +78,7 @@ export default function CreateGroup(): JSX.Element {
           variant="tertiary"
           placeholder="&nbsp;"
           label="Time"
-          type="text"
+          type="time"
           value={time}
           onChange={setTime}
           required

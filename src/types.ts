@@ -8,8 +8,8 @@ export type Group = {
   time: string;
   location: string;
   limit: number;
-  equipment: string;
-  description: string;
+  equipment?: string;
+  description?: string;
 };
 
 export type User = {
@@ -18,4 +18,14 @@ export type User = {
   email: string;
   password: string;
   confirmPassword: string;
+};
+
+export type GroupCard = {
+  id?: ObjectId;
+  groupname: string;
+  location: string;
+  month: string;
+  date: string;
+  time: string;
+  distance: number;
 };

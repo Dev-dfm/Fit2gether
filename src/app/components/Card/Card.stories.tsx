@@ -8,10 +8,10 @@ export default {
 
 export const GroupCard = (): JSX.Element => (
   <Card
-    groupTitle="Boxing"
+    groupname="Boxing"
     location="Aachener Weiher"
     month="Jan"
-    date={27}
+    date="27"
     time="18:00"
     distance={5}
   />

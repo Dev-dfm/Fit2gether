@@ -6,4 +6,6 @@ export default {
   component: Hero,
 };
 
-export const HeroContainer = (): JSX.Element => <Hero />;
+export const HeroContainer = (): JSX.Element => (
+  <Hero search="" setSearch={console.log} />
+);

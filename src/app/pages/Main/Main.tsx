@@ -34,6 +34,7 @@ export default function Main(): JSX.Element {
             )
             .map((groupCard) => (
               <Card
+                key={groupCard._id}
                 groupname={groupCard.groupname}
                 location={groupCard.location}
                 month={groupCard.month}

@@ -4,7 +4,15 @@ import RadioButton from '../RadioButton/RadioButton';
 import SearchBar from '../SearchBar/SearchBar';
 import styles from './Hero.module.css';
 
-export default function Hero(): JSX.Element {
+type HeroSearchProps = {
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export default function Hero({
+  search,
+  setSearch,
+}: HeroSearchProps): JSX.Element {
   return (
     <div className={styles.hero}>
       <div className={styles.hero__radioButtons}>
@@ -33,7 +41,12 @@ export default function Hero(): JSX.Element {
         </div>
       </div>
 
-      <SearchBar type="text" placeholder="Search for groups or sports" />
+      <SearchBar
+        type="text"
+        placeholder="Search for groups or sports"
+        value={search}
+        onChange={setSearch}
+      />
     </div>
   );
 }

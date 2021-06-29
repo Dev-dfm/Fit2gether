@@ -21,7 +21,7 @@ export type User = {
 };
 
 export type GroupCard = {
-  id?: ObjectId;
+  _id?: ObjectId;
   groupname: string;
   location: string;
   month: string;

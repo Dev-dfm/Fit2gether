@@ -7,5 +7,10 @@ export default {
 };
 
 export const Search = (): JSX.Element => (
-  <SearchBar type="text" placeholder="Search for groups or sports" />
+  <SearchBar
+    type="text"
+    placeholder="Search for groups or sports"
+    value=""
+    onChange={console.log}
+  />
 );

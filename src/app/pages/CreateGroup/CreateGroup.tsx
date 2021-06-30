@@ -124,9 +124,6 @@ export default function CreateGroup(): JSX.Element {
           <Button variant="primary">Create group</Button>
         </div>
       </form>
-      <footer className={styles.footer}>
-        <NavBar />
-      </footer>
     </div>
   );
 }

@@ -45,9 +45,6 @@ export default function Main(): JSX.Element {
             ))}
         </div>
       </main>
-      <footer>
-        <NavBar />
-      </footer>
     </div>
   );
 }

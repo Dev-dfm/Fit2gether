@@ -6,8 +6,14 @@ export const getGroupsCollection = (): Collection<Group> => {
   return getCollection<Group>('groups');
 };
 
-export const readGroups = async (): Promise<Group[]> => {
-  return await getGroupsCollection().find().sort({ groupname: 1 }).toArray();
+export const readGroups = async (
+  filter: string,
+  sort_by: string
+): Promise<Group[]> => {
+  return await getGroupsCollection()
+    .find({ groupname: { $regex: filter, $options: 'ig' } })
+    .sort({ [sort_by]: 1 })
+    .toArray();
 };
 
 export const readGroup = async (groupname: string): Promise<Group> => {

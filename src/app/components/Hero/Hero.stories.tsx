@@ -7,5 +7,5 @@ export default {
 };
 
 export const HeroContainer = (): JSX.Element => (
-  <Hero search="" setSearch={console.log} />
+  <Hero search="" setSearch={console.log} setSort={console.log} />
 );

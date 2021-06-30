@@ -7,6 +7,7 @@ type RadioButtonProps = {
   value: string;
   name: string;
   className?: string;
+  onChange?: () => void;
 };
 
 export default function Filter({
@@ -14,6 +15,7 @@ export default function Filter({
   type,
   value,
   name,
+  onChange,
 }: RadioButtonProps): JSX.Element {
   return (
     <label className={styles.radio}>
@@ -22,6 +24,7 @@ export default function Filter({
         type={type}
         value={value}
         name={name}
+        onChange={onChange}
       />
       <div className={styles.radio__button}>
         <span className={styles.radio__label}>{label}</span>

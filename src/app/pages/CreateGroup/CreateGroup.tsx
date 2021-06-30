@@ -20,7 +20,10 @@ export default function CreateGroup(): JSX.Element {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
+    const newDate = new Date();
+
     const group: Group = {
+      newDate,
       groupname,
       sport,
       date,

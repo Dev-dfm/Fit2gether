@@ -2,6 +2,7 @@ import { ObjectId } from 'bson';
 
 export type Group = {
   _id?: ObjectId;
+  newDate: Date;
   groupname: string;
   sport: string;
   date: string;

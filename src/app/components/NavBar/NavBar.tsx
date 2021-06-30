@@ -14,7 +14,7 @@ const translateDrop: {
 } = {
   '/main': (-100 / 6) * 2,
   '/profile': (-100 / 6) * 1,
-  '/add': 0,
+  '/createGroup': 0,
   '/search': (100 / 6) * 1,
   '/': (100 / 6) * 2,
 };
@@ -24,57 +24,71 @@ const translateDropPixel: {
 } = {
   '/main': -20,
   '/profile': -10,
-  '/add': 0,
+  '/createGroup': 0,
   '/search': 10,
   '/': 20,
 };
 
-export default function NavBar(): JSX.Element {
+type NavBarProps = {
+  className: string;
+};
+
+export default function NavBar({ className }: NavBarProps): JSX.Element {
   const location = useLocation();
   const activePath: string = location.pathname;
 
+  if (
+    location.pathname === '/' ||
+    location.pathname === '/forgotPassword' ||
+    location.pathname === '/register'
+  ) {
+    return <></>;
+  }
+
   return (
-    <div className={styles.navBar}>
-      <NavBarLink
-        active={activePath === '/main'}
-        icon={<HomeIcon />}
-        text="Home"
-        link="/main"
-      />
-      <NavBarLink
-        active={activePath === '/profile'}
-        icon={<ProfileIcon />}
-        text="Profile"
-        link="/profile"
-      />
+    <div className={className}>
+      <div className={styles.navBar}>
+        <NavBarLink
+          active={activePath === '/main'}
+          icon={<HomeIcon />}
+          text="Home"
+          link="/main"
+        />
+        <NavBarLink
+          active={activePath === '/profile'}
+          icon={<ProfileIcon />}
+          text="Profile"
+          link="/profile"
+        />
 
-      <NavBarLink
-        active={activePath === '/createGroup'}
-        icon={<PlusIcon />}
-        text="Add"
-        link="/createGroup"
-      />
+        <NavBarLink
+          active={activePath === '/createGroup'}
+          icon={<PlusIcon />}
+          text="Add"
+          link="/createGroup"
+        />
 
-      <NavBarLink
-        active={activePath === '/search'}
-        icon={<SearchIcon />}
-        text="Search"
-        link="/search"
-      />
-      <NavBarLink
-        active={activePath === '/'}
-        icon={<LogoutIcon />}
-        text="Logout"
-        link="/"
-      />
+        <NavBarLink
+          active={activePath === '/search'}
+          icon={<SearchIcon />}
+          text="Search"
+          link="/search"
+        />
+        <NavBarLink
+          active={activePath === '/'}
+          icon={<LogoutIcon />}
+          text="Logout"
+          link="/"
+        />
 
-      <div
-        className={styles.drop}
-        style={{
-          transform: `translateX(calc(${translateDropPixel[activePath]}px + ${translateDrop[activePath]}vw))`,
-        }}
-      >
-        <NavBarDrop />
+        <div
+          className={styles.drop}
+          style={{
+            transform: `translateX(calc(${translateDropPixel[activePath]}px + ${translateDrop[activePath]}vw))`,
+          }}
+        >
+          <NavBarDrop />
+        </div>
       </div>
     </div>
   );

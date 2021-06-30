@@ -6,7 +6,7 @@ GET {{baseUrl}}/api/groups
 Content-Type: application/json
 
 ### Request group
-GET {{baseUrl}}/api/groups/Boxing
+GET {{baseUrl}}/api/groups/Boxing Panda
 Content-Type: application/json
 
 ### Add new group

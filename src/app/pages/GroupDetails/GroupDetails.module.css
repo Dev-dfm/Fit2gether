@@ -27,6 +27,7 @@
   overflow-x: hidden;
   display: grid;
   max-width: 100em;
+  width: clamp(20em, 90%, 50em);
 }
 
 .groupDetails::-webkit-scrollbar {

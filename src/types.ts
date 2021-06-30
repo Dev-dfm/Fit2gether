@@ -21,11 +21,22 @@ export type User = {
 };
 
 export type GroupCard = {
-  _id?: ObjectId;
+  _id?: string;
   groupname: string;
   location: string;
   month: string;
   date: string;
   time: string;
   distance: number;
+};
+
+export type GroupDetails = {
+  groupname: string;
+  month: string;
+  date: string;
+  location: string;
+  time: string;
+  distance: number;
+  description: string;
+  equipment: string;
 };

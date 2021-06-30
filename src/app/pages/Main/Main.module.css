@@ -1,6 +1,7 @@
 .container {
   height: 100vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-rows: auto 1fr auto;
   overflow: hidden;
 }
@@ -13,6 +14,7 @@
   display: grid;
   padding: 1em;
   justify-content: center;
+  margin-bottom: 4.8em;
 }
 
 .cards::-webkit-scrollbar {

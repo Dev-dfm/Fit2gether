@@ -7,11 +7,13 @@ import styles from './Hero.module.css';
 type HeroSearchProps = {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
+  setSort: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export default function Hero({
   search,
   setSearch,
+  setSort,
 }: HeroSearchProps): JSX.Element {
   return (
     <div className={styles.hero}>
@@ -21,8 +23,9 @@ export default function Hero({
             className="hero__filterNear"
             label="nearest"
             type="radio"
-            value=""
+            value="distance"
             name="filter"
+            onChange={() => setSort('distance')}
           />
         </div>
 
@@ -35,8 +38,9 @@ export default function Hero({
             className="hero__filterNew"
             label="newest"
             type="radio"
-            value=""
+            value="date"
             name="filter"
+            onChange={() => setSort('date')}
           />
         </div>
       </div>

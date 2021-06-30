@@ -1,5 +1,5 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
+.navbar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }

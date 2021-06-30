@@ -1,6 +1,7 @@
 .container {
   height: 100vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-content: space-between;
   background: var(--primary-bg-color);
   overflow: hidden;
@@ -44,7 +45,7 @@
 }
 
 .form {
-  padding: 2em 0;
+  padding: 2em 0 7em 0;
   width: 90%;
   max-width: 50em;
   margin: 0 auto;

@@ -7,6 +7,7 @@ import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 import Main from './pages/Main/Main';
 import CreateGroup from './pages/CreateGroup/CreateGroup';
 import GroupDetails from './pages/GroupDetails/GroupDetails';
+import NavBar from './components/NavBar/NavBar';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -33,6 +34,7 @@ function App(): JSX.Element {
             </Route>
           ))}
         </Switch>
+        <NavBar className={styles.navbar} />
       </BrowserRouter>
     </div>
   );

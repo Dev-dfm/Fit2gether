@@ -6,4 +6,4 @@ export default {
   component: NavBar,
 };
 
-export const NavBarContainer = (): JSX.Element => <NavBar />;
+export const NavBarContainer = (): JSX.Element => <NavBar className="" />;

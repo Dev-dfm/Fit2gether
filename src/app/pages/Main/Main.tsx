@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styles from './Main.module.css';
 import Card from '../../components/Card/Card';
 import Hero from '../../components/Hero/Hero';
-import NavBar from '../../components/NavBar/NavBar';
 import useGroupCards from '../../hooks/useGroupCard';
 
 export default function Main(): JSX.Element {

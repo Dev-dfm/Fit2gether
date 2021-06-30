@@ -5,8 +5,13 @@ import { deleteUser, readUser, readUsers, saveUser } from './users';
 const router = express.Router();
 
 // Groups
-router.get('/groups', async (_req, res) => {
-  const groups = await readGroups();
+router.get('/groups', async (req, res) => {
+  const { filter, sort_by } = req.query;
+  if (typeof filter !== 'string' || typeof sort_by !== 'string') {
+    res.status(400).send('Query is malformed');
+    return;
+  }
+  const groups = await readGroups(filter, sort_by);
   res.json(groups);
 });
 

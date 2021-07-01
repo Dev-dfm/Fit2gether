@@ -7,6 +7,7 @@ import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 import Main from './pages/Main/Main';
 import CreateGroup from './pages/CreateGroup/CreateGroup';
 import GroupDetails from './pages/GroupDetails/GroupDetails';
+import Profile from './pages/Profile/Profile';
 import NavBar from './components/NavBar/NavBar';
 
 type CustomRouteProps = RouteProps & {
@@ -21,6 +22,7 @@ const routes: CustomRouteProps[] = [
   { path: '/main', Component: Main },
   { path: '/createGroup', Component: CreateGroup },
   { path: '/groupDetails', Component: GroupDetails },
+  { path: '/profile', Component: Profile },
 ];
 
 function App(): JSX.Element {

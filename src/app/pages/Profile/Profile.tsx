@@ -10,7 +10,7 @@ export default function Profile(): JSX.Element {
         </div>
       </div>
 
-      <article className={styles.main}>
+      <main className={styles.main}>
         <h1 className={styles.main__userName}>Hi, Jonni!</h1>
         <h2 className={styles.main_fullName}>John Doe</h2>
         <p className={styles.main__motto}>- Free to be free -</p>
@@ -24,7 +24,7 @@ export default function Profile(): JSX.Element {
           illum dignissimos! Esse ipsam cumque fugiat inventore dicta labore
           ipsum doloribus.
         </p>
-      </article>
+      </main>
     </div>
   );
 }

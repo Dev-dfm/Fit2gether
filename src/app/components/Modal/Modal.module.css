@@ -1,0 +1,73 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: clamp(30%, 30em, 70%);
+  height: 80%;
+  border-radius: 2em;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.header {
+  background-image: url(/boxing.jpeg);
+  width: 100%;
+  height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1em;
+  border-radius: 2em 2em 0 0;
+  position: relative;
+  min-height: 10em;
+}
+
+.closeButton {
+  position: absolute;
+  right: 1em;
+}
+
+.header__buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+.joinButton {
+  position: absolute;
+  width: 6em;
+  right: 1em;
+  bottom: 1em;
+}
+
+.main {
+  padding: 0 2em;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.main__title {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--secondary-color);
+}
+
+.main__article h3 {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin: 0;
+  margin-top: 1em;
+}
+
+.main__article p {
+  padding: 0 0.7em;
+  margin: 0.5em;
+}

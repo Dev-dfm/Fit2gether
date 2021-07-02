@@ -24,26 +24,14 @@ export default function Schedule({
   const [day, month] = toFormattedDate(date);
   return (
     <section className={styles.groupDetails__schedule}>
-      <div className={styles.groupDetails__date}>
-        <p className={styles.groupDetails__month}>{month}</p>
-        <p className={styles.groupDetails__day}>{day}</p>
-      </div>
-
-      <div className={styles.groupDetails__location}>
-        <p className={styles.groupDetails__locationTitle}>Location</p>
-        <p>{location}</p>
-      </div>
-
-      <div className={styles.groupDetails__icon}>
-        <ClockIcon />
-      </div>
+      <p className={styles.groupDetails__month}>{month}</p>
+      <p className={styles.groupDetails__locationTitle}>Location</p>
+      <p className={styles.groupDetails__day}>{day}</p>
+      <p className={styles.groupDetails__location}>{location}</p>
+      <ClockIcon className={styles.icon} />
       <p>{time}</p>
-
-      <div className={styles.groupDetails__icon}>
-        <DistanceIcon />
-      </div>
+      <DistanceIcon className={styles.icon} />
       <p>{distance} km</p>
-
       <MemberIcon />
       <p> {member} </p>
     </section>

@@ -13,11 +13,13 @@ export default function Card({
   date,
   time,
   distance,
+  onClick,
 }: GroupCard): JSX.Element {
   const [day, month] = toFormattedDate(date);
+
   return (
-    <Link to={`/GroupDetails?groupname=${groupname}`}>
-      <div className={styles.card}>
+    <Link to={`/main?groupname=${groupname}`}>
+      <div className={styles.card} onClick={onClick}>
         <div className={styles.imageFrame}>
           <div className={styles.image}></div>
         </div>

@@ -20,9 +20,7 @@ export default function Profile(): JSX.Element {
         <p className={styles.main__gender}>male</p>
         <p className={styles.main__aboutMeTitle}>About me</p>
         <p className={styles.main__aboutMe}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
-          illum dignissimos! Esse ipsam cumque fugiat inventore dicta labore
-          ipsum doloribus.
+          Hi, I am Jonni. My favourite sports are Cathletics and Freerunning.
         </p>
       </main>
     </div>

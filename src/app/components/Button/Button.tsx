@@ -6,6 +6,7 @@ export type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'tertiary';
   onClick?: () => void;
   disabled?: boolean;
+  className?: string;
 };
 
 export default function Button({
@@ -13,13 +14,14 @@ export default function Button({
   variant,
   onClick,
   disabled,
+  className,
 }: ButtonProps): JSX.Element {
   return (
     <button
       className={
         variant
-          ? `${styles[`button--${variant}`]} ${styles.button}`
-          : styles.button
+          ? `${styles[`button--${variant}`]} ${styles.button} ${className}`
+          : `${styles.button} ${className}`
       }
       onClick={onClick}
       disabled={disabled}

@@ -37,12 +37,6 @@
   right: 1em;
 }
 
-.header__buttons {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1em;
-}
-
 .joinButton {
   position: absolute;
   width: 6em;

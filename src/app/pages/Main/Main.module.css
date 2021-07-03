@@ -21,10 +21,6 @@
   display: none;
 }
 
-.card {
-  display: grid;
-}
-
 .modal__container {
   position: absolute;
   width: 100%;

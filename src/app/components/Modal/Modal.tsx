@@ -34,12 +34,10 @@ export default function Modal({ className, onClose }: ModalProps): JSX.Element {
     <div className={className}>
       <div className={styles.card}>
         <header className={styles.header}>
-          <div className={styles.closeButton}>
-            <CloseButton onClick={onClose} />
-          </div>
-          <div className={styles.joinButton}>
-            <Button variant="tertiary">Join</Button>
-          </div>
+          <CloseButton className={styles.closeButton} onClick={onClose} />
+          <Button className={styles.joinButton} variant="tertiary">
+            Join
+          </Button>
         </header>
         <main className={styles.main}>
           <div className={styles.main__title}>

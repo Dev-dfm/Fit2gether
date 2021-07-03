@@ -7,6 +7,7 @@ import Modal from '../../components/Modal/Modal';
 import useGroupCards from '../../hooks/useGroupCard';
 
 export default function Main(): JSX.Element {
+  const history = useHistory();
   const [search, setSearch] = useState('');
   const [sort, setSort] = useState('date');
   const [showModal, setShowModal] = useState(false);
@@ -28,7 +29,6 @@ export default function Main(): JSX.Element {
     setShowModal(true);
   };
 
-  const history = useHistory();
   const closeModal = () => {
     setShowModal(false);
     history.push('/main');
@@ -40,20 +40,18 @@ export default function Main(): JSX.Element {
         <Hero search={search} setSearch={setSearch} setSort={setSort} />
       </header>
       <main className={styles.cards}>
-        <div className={styles.card}>
-          {groupCards.map((groupCard) => (
-            <Card
-              key={groupCard._id}
-              groupname={groupCard.groupname}
-              location={groupCard.location}
-              month={groupCard.month}
-              date={groupCard.date}
-              time={groupCard.time}
-              distance={groupCard.distance}
-              onClick={openModal}
-            />
-          ))}
-        </div>
+        {groupCards.map((groupCard) => (
+          <Card
+            key={groupCard._id}
+            groupname={groupCard.groupname}
+            location={groupCard.location}
+            month={groupCard.month}
+            date={groupCard.date}
+            time={groupCard.time}
+            distance={groupCard.distance}
+            onClick={openModal}
+          />
+        ))}
       </main>
       {showModal && (
         <Modal

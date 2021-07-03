@@ -18,33 +18,24 @@ export default function Hero({
   return (
     <div className={styles.hero}>
       <div className={styles.hero__radioButtons}>
-        <div className={styles.hero__filter}>
-          <RadioButton
-            className="hero__filterNear"
-            label="nearest"
-            type="radio"
-            value="distance"
-            name="filter"
-            onChange={() => setSort('distance')}
-          />
-        </div>
-
-        <div className={styles.logo}>
-          <Logo />
-        </div>
-
-        <div className={styles.hero__filter}>
-          <RadioButton
-            className="hero__filterNew"
-            label="newest"
-            type="radio"
-            value="date"
-            name="filter"
-            onChange={() => setSort('date')}
-          />
-        </div>
+        <RadioButton
+          className={styles.hero__filter}
+          label="nearest"
+          type="radio"
+          value="distance"
+          name="filter"
+          onChange={() => setSort('distance')}
+        />
+        <Logo className={styles.logo} />
+        <RadioButton
+          className={styles.hero__filter}
+          label="newest"
+          type="radio"
+          value="date"
+          name="filter"
+          onChange={() => setSort('date')}
+        />
       </div>
-
       <SearchBar
         type="text"
         placeholder="Search for groups or sports"

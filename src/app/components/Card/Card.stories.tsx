@@ -14,5 +14,6 @@ export const GroupCard = (): JSX.Element => (
     date="27"
     time="18:00"
     distance={5}
+    onClick={console.log}
   />
 );

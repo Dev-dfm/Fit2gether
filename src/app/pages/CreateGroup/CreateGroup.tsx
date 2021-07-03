@@ -6,8 +6,10 @@ import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import styles from './CreateGroup.module.css';
 import { postGroup } from '../../utils/api';
 import { Group } from '../../../types';
+import { useHistory } from 'react-router-dom';
 
 export default function CreateGroup(): JSX.Element {
+  const history = useHistory();
   const [groupname, setGroupname] = useState('');
   const [sport, setSport] = useState('');
   const [date, setDate] = useState('');
@@ -19,6 +21,7 @@ export default function CreateGroup(): JSX.Element {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    history.push('/main');
 
     const newDate = new Date();
 
@@ -39,9 +42,7 @@ export default function CreateGroup(): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.hero}>
-        <div className={styles.backButton}>
-          <BackButton />
-        </div>
+        <BackButton className={styles.backButton} />
         <h1>Create Group</h1>
         <button className={styles.uploadButton}>
           <UploadGroupImage />

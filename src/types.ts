@@ -29,6 +29,7 @@ export type GroupCard = {
   date: string;
   time: string;
   distance: number;
+  onClick: () => void;
 };
 
 export type GroupDetails = {

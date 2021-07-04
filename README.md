@@ -5,11 +5,11 @@ Fit2gether is an app designed to bring together people from your area who have c
 
 ### Demo
 
-<img width="30%" align="left" alt="login page" src="/login_page.png"
+<img width="30%" align="left" alt="login page" src="src/app/assets/login_page.png"
  />
-<img width="30%" align="center" alt="main page" src="/main_page.png"
+<img width="30%" align="center" alt="main page" src="src/app/assets/main_page.png"
  />
-<img width="15%" align="right" alt="logo" src="/logo.svg"
+<img width="15%" align="right" alt="logo" src="src/app/assets/logo.svg"
  />
 Here you can view and test the app:
 

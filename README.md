@@ -9,9 +9,8 @@ Fit2gether is an app designed to bring together people from your area who have c
  />
 <img width="30%" align="center" alt="main page" src="src/app/assets/main_page.png"
  />
-<img width="15%" align="right" alt="logo" src="src/app/assets/logo.svg"
- />
-Here you can view and test the app:
+
+#### Here you can view and test the app:
 
 - [Heroku](https://fit-2-gether.herokuapp.com/)
 

@@ -34,7 +34,9 @@ function App(): JSX.Element {
             </Route>
           ))}
         </Switch>
-        <NavBar className={styles.navbar} />
+        <Route path={['/main', '/createGroup', '/profile']}>
+          <NavBar className={styles.navbar} />
+        </Route>
       </BrowserRouter>
     </div>
   );

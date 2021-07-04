@@ -37,14 +37,6 @@ export default function NavBar({ className }: NavBarProps): JSX.Element {
   const location = useLocation();
   const activePath: string = location.pathname;
 
-  if (
-    location.pathname === '/' ||
-    location.pathname === '/forgotPassword' ||
-    location.pathname === '/register'
-  ) {
-    return <></>;
-  }
-
   return (
     <div className={className}>
       <div className={styles.navBar}>

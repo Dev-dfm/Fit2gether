@@ -1,4 +1,4 @@
-# Fit2gether
+# <img width="5%" align="left" alt="logo" src="src/app/assets/logo.svg"/> Fit2gether
 
 Train, have fun and find new people who have the same sports interests as you.
 Fit2gether is an app designed to bring together people from your area who have common sporting interests and want to do sport together.

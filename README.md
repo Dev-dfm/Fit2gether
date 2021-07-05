@@ -16,33 +16,43 @@ Fit2gether is an app designed to bring together people from your area who have c
 
 ## Installing / Getting started
 
-In the project directory, you can run:
+Install dependencies with:
 
 ```shell
 npm install
-npm start
 ```
 
-Runs the server in production mode and serve production bundle from npm run build
-
-```shell
-npm run dev:client
-```
-
-Runs the app in development mode. Open http://localhost:3000 (default PORT) to view it in the browser.
-The page will automatically reload if you make changes to the code. You will see the build errors and lint warnings in the console.
-
-```shell
-npm run dev:server
-```
-
-Runs the server in development mode.
+Build the app for production to the dist folder:
 
 ```shell
 npm run build
 ```
 
-Run storybook.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+The build is minified and the filenames include the hashes
+
+Run the server in production mode and serve production bundle from npm run build:
+
+```shell
+npm start
+```
+
+Run the app in development mode:
+
+```shell
+npm run client:dev
+```
+
+Open http://localhost:3000 (default PORT) to view it in the browser.
+The page will automatically reload if you make changes to the code. You will see the build errors and lint warnings in the console.
+
+Run the server in development mode:
+
+```shell
+npm run server:dev
+```
+
+Run storybook:
 
 ```shell
 npm run storybook

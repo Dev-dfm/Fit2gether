@@ -13,6 +13,9 @@ Fit2gether is an app designed to bring together people from your area who have c
 #### Here you can view and test the app:
 
 - [Heroku](https://fit-2-gether.herokuapp.com/)
+- [Storybook](https://fit-2-gether.herokuapp.com/storybook/?path=/story/page-login--login-page)
+
+The deployment takes a little longer the first time it is loaded, because Heroku's servers fall asleep.
 
 ## Installing / Getting started
 
@@ -56,6 +59,17 @@ Run storybook:
 
 ```shell
 npm run storybook
+```
+
+## .env
+
+You have to create a .env file inside the main folder.
+
+The file looks like:
+
+```shell
+PORT=
+MONGODB_URL=
 ```
 
 ## Developing

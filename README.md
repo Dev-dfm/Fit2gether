@@ -94,7 +94,6 @@ MONGODB_URL=
 - [Storybook](https://storybook.js.org/)
 - [Heroku](https://www.heroku.com)
 - [dotenv](https://github.com/motdotla/dotenv)
-- [node-fetch](https://github.com/node-fetch/node-fetch)
 - [JEST](https://jestjs.io/)
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
